@@ -12,5 +12,10 @@ describe ("polybius", () => {
     const actual = polybius.polybius("25432441", encode = false)
     const expected = 'word'
     expect(actual).to.eql(expected)
-})
+  })
+    it("Should encode 'message' correctly", () => {
+    const actual = polybius.polybius("message")
+    const expected = '23513434112251'
+    expect(actual).to.eql(expected)
+  })
 })
